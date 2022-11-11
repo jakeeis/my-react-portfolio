@@ -1,6 +1,6 @@
 import React from "react";
 
-function About() {
+function PageContent() {
   return (
     <div>
       <p>Lorem</p>
@@ -8,4 +8,4 @@ function About() {
   );
 }
 
-export default About;
+export default PageContent;
