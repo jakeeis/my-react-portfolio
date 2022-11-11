@@ -1,9 +1,9 @@
 import React from "react";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import PageContent from "./components/PageContent";
-import Resume from "./components/Resume";
+import About from "../About";
+import Portfolio from "../Portfolio";
+import Contact from "../Contact";
+import PageContent from "../PageContent";
+import Resume from "../Resume";
 
 function Page({ currentPage }) {
   const pageRender = () => {
