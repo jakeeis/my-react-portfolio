@@ -3,7 +3,6 @@ import About from "../About";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import PageContent from "../PageContent";
-import Resume from "../Resume";
 
 function Page({ currentPage }) {
   const pageRender = () => {
@@ -14,10 +13,8 @@ function Page({ currentPage }) {
         return <Portfolio />;
       case "Contact":
         return <Contact />;
-      case "PageContent":
-        return <PageContent />;
-      case "Resume":
-        return <Resume />;
+      // case "Resume":
+      //   return <Resume />;
       default:
         return <About />;
     }

@@ -9,3 +9,4 @@ function Footer() {
 }
 
 export default Footer;
+//don't really need this, if you elimiate - take it off of page 
