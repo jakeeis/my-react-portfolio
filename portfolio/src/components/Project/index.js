@@ -1,27 +1,31 @@
-import React from "react";
+import React from 'react';
 
+// This should be scoped in the future...
+import './project.css';
 
-function Project({project}) {
-const {name, description, repo, link} = project
+const generateImage = (name, imageName) => {
+  try {
+    const src = require(`../../assets/${imageName}`);
+    return <img src={src} alt={name} className="card-img" />;
+  } catch (e) {
+    console.warn(e);
+    return <span>Image not found</span>;
+  }
+};
 
-return (
-  <div className="project" key={name}>
-    <img src={require(`../../assets/${name}.png`)}
-    alt={name} className="project.bg"></img>
-    <div className="project-text">
-      <h3>
-        <a href={link}>{name}</a>{' '}
-        <a href={repo}>{repo}</a>{' '} 
-        {/* //can be github icon */}
-
-        
-      </h3>
-      <p>{description}</p>
+function Project({ name, imageName, description, repo, link }) {
+  return (
+    <div className="project" key={name}>
+      {generateImage(name, imageName)}
+      <div className="project-text">
+        <h3>
+          <a href={link}>{name}</a>{' '}
+          <a href={`https://github.com/danagolebiewski/${repo}`}>{repo}</a>{' '}
+          {/* //can be github icon */}
+        </h3>
+        <p>{description}</p>
+      </div>
     </div>
-  </div>
-)
-
-
-  
+  );
 }
 export default Project;
